@@ -262,7 +262,7 @@ Rezultatas:
     v1 Perskirstymas ivyko: 27
 ```
 
-## Optimizavimo analizė VECTOR VS CODE MINGW64 (O1, O2, O3) 10 000 000 - CODEBLOCKS
+## Optimizavimo analizė STD::VECTOR VS CODE MINGW64 (O1, O2, O3)
 |     FLAG    |    -O1    |   -O2     |   -O3     |  REGULAR  |
 | ----------- | --------- | --------- | --------- | --------- |
 | 10 000 000  |           |           |           |           |
