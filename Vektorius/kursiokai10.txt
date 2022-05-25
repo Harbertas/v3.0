@@ -1,0 +1,11 @@
+Vardas         Pavarde        ND1       ND2       ND3       ND4       ND5       Egz.
+Matas          Mantaitis      9         1         2         6         8         1
+Matas          Mataitis       3         3         3         8         1         9
+Romas          Mantaitis      4         10        4         6         9         2
+Romas          Kazaitis       1         5         3         8         1         7
+Antanas        Petraitis      5         5         6         3         3         9
+Jonas          Mantaitis      1         5         9         6         10        1
+Jonas          Lukaitis       7         3         3         2         1         8
+Antanas        Tomaitis       3         3         2         9         9         5
+Lukas          Virgaitis      4         2         9         1         8         2
+Tomas          Valdaitis      5         3         7         7         10        10
