@@ -262,33 +262,21 @@ Rezultatas:
     v1 Perskirstymas ivyko: 27
 ```
 
-#AntraStrategija - Bendro studentų konteinerio (vector, list ir deque) skaidymas (rūšiavimas) panaudojant tik vieną naują konteinerį: "vargšiukai". Tokiu būdu, jei studentas yra vargšiukas, jį turime įkelti į naująjį "vargšiukų" konteinerį ir ištrinti iš bendro studentai konteinerio. Po šio žingsnio studentai konteineryje liks vien tik kietiakai. Atminties atveju tai efektyviau, tačiau dažni trynimai gali būti "skausmingi", ypač tam tikro tipo konteineriams.
-
-## Spartos analizė (#AntraStrategija)
-| File Size   | VECTOR    | LIST      | DEQUE     |
-| ----------- | --------- | --------- | --------- |
-| 10 000 000  |           |           |           |
-| Nuskaitymas | 6,56743   | 7,4048    | 6,57549   |
-| Rūšiavimas  | 22,5238   | 15,1803   | 48,5964   |
-| Atskyrimas  | 6,14556   | 9,90316   | 8,91084   |
-| Visas Laikas| 35,2368   | 32,4883   | 64,0827   |
-| 1 000 000   |           |           |           |
-| Nuskaitymas | 0,674196  | 0,732539  | 0,661231  |
-| Rūšiavimas  | 1,81215   | 1,22027   | 4,02281   |
-| Atskyrimas  | 0,540555  | 0,922065  | 0,734049  |
-| Visas Laikas| 3,0269    | 2.87487   | 5,41809   |
-| 100 000     |           |           |           |
-| Nuskaitymas | 0,0787889 | 0,0797862 | 0,0668212 |
-| Rūšiavimas  | 0,140624  | 0,0812882 | 0,299705  |
-| Atskyrimas  | 0,0468748 | 0,0862754 | 0,0618351 |
-| Visas Laikas| 0,266288  | 0,24735   | 0,428361  |
-| 10 000      |           |           |           |
-| Nuskaitymas | 0,0069805 | 0,009973  | 0,0089758 |
-| Rūšiavimas  | 0,0119678 | 0,0059842 | 0,0239358 |
-| Atskyrimas  | 0,0049868 | 0,005984  | 0,0059839 |
-| Visas Laikas| 0,0239351 | 0,0219412 | 0,0388955 |
-| 1 000       |           |           |           |
-| Nuskaitymas | 0,0009974 | 0,0009963 | 0,0009976 |
-| Rūšiavimas  | 0,0009971 | 0,0009985 | 0,0019944 |
-| Atskyrimas  | 0,0009968 | 0,0009971 | 0,0000000 |
-| Visas Laikas| 0,0029913 | 0,0029919 | 0,002992  |
+## Optimizavimo analizė VECTOR VS CODE MINGW64 (O1, O2, O3) 10 000 000 - CODEBLOCKS
+|     FLAG    |    -O1    |   -O2     |   -O3     |  REGULAR  |
+| ----------- | --------- | --------- | --------- | --------- |
+| 10 000 000  |           |           |           |           |
+| Nuskaitymas |  7,16445  |  7,11857  |  7,2323   |  7,09068  |
+| Rūšiavimas  | 28,2978   | 28,7362   | 29,7261   | 28,4544   |
+| Atskyrimas  |  6,57801  |  7,07288  |  6,68226  |  7,0109   |
+| Visas Laikas| 42,0402   | 42,9277   | 43,6406   | 42,556    |
+| 1 000 000   |           |           |           |           |
+| Nuskaitymas |  1,12     |  1,11801  |  1,2798   |   1,25664 |
+| Rūšiavimas  |  7,75227  |  7,73233  |  7,69243  |   8,12727 |
+| Atskyrimas  |  1,19181  |  1,18284  |  1,18084  |   1,50797 |
+| Visas Laikas| 10,0641   | 10,03318  | 10,15307  |  10,8919  |
+| 100 000     |           |           |           |           |
+| Nuskaitymas | 0,120677  | 0,120677  | 0,123669  |  0,11968  |
+| Rūšiavimas  | 0,583439  | 0,58344   | 0,595408  |  0,61336  |
+| Atskyrimas  | 0,119681  | 0,115691  | 0,139627  |  0,147606 |
+| Visas Laikas| 0,823797  | 0,819808  | 0,858704  |  0,880646 |
