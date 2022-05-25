@@ -13,7 +13,7 @@ int main()
     double timeTaken = 0;
 
     string generuoti;
-    cout << "Ar norite generuoti faila? (0 - ne, 1 - taip)" << endl;
+    std::cout << "Ar norite generuoti faila? (0 - ne, 1 - taip)" << endl;
     cin >> generuoti;
     //while((generuoti != "0" && generuoti != "1") || onlyLetters(generuoti) == true){
     //    cout << "Ivedete netinkamus duomenis, bandykite dar karta!" << endl;
@@ -34,7 +34,7 @@ int main()
         string generatedFileName = "kursiokai";
         int fileLength;
 
-        cout << "Iveskite failo ilgi" << endl;
+        std::cout << "Iveskite failo ilgi" << endl;
         cin >> fileLength;
 
         //while(cin.fail()){
@@ -56,17 +56,17 @@ int main()
             df.close();
         }
         catch(int x){
-            cout << "Toks duomenu failas ('" << generatedFileName << "') neegzistuoja, Klaidos kodas: " << x << endl;
+            std::cout << "Toks duomenu failas ('" << generatedFileName << "') neegzistuoja, Klaidos kodas: " << x << endl;
             exit(0);
         }
         std::ifstream df(generatedFileName);
         skaityti.readStudent(df, sarasas, timeTaken);
-        //mix(generatedFileName, "kursiokai_copy.txt", sarasas, fileLength, timeTaken);
+        ////mix(generatedFileName, "kursiokai_copy.txt", sarasas, fileLength, timeTaken);
         rikiavimas(sarasas, fileLength, timeTaken);
         atskirti(sarasas, sarasas2, fileLength, timeTaken);
         spausdinti(sarasas, sarasas2, fileLength/*, timeTaken*/);
-        cout << '\n';
-        cout << fileLength << " irasu testo laikas: " << std::setprecision(6) << timeTaken << endl;   
+        std::cout << '\n';
+        std::cout << fileLength << " irasu testo laikas: " << std::setprecision(6) << timeTaken << endl;
 
         //duomenys str1, str2;
         //str1.setVardas("Hubertas");
@@ -82,6 +82,7 @@ int main()
         //cout << str1.vardas() << endl; // what is printed now?
         //cout << str2.vardas() << endl;
         //duomenys zmog;
+
     }
     return 0;
 }

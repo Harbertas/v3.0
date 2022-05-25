@@ -6,9 +6,9 @@
 #include <string>
 #include <random>
 #include <ctime>
-#include <vector>
-#include <list>
-#include <deque>
+//#include <vector>
+//#include <list>
+//#include <deque>
 #include <iterator>
 #include <algorithm>
 #include <fstream>
@@ -17,15 +17,17 @@
 #include <stdlib.h>
 #include <sstream>
 #include <Windows.h>
+#include <memory>
 //#include <execution>
+#include "vector.h"
 
 using std::cout;
 using std::cin;
 using std::string;
 using std::endl;
-using std::vector;
-using std::list;
-using std::deque;
+//using std::vector;
+//using std::list;
+//using std::deque;
 using std::stringstream;
 using std::to_string;
 

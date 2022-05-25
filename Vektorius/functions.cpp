@@ -182,7 +182,7 @@ std::istream& duomenys::readStudent(std::ifstream& df, vector<duomenys> &sarasas
 }
 
 void isvedimas(duomenys &temp){
-    cout << std::left << std::setw(15) << temp.pavarde() << std::left << std::setw(15) << temp.vardas() << std::left << std::setw(19) << std::fixed << std::setprecision(2) << temp.rezult() << std::fixed << std::setprecision(2) << temp.mediana(temp) << endl;
+    std::cout << std::left << std::setw(15) << temp.pavarde() << std::left << std::setw(15) << temp.vardas() << std::left << std::setw(19) << std::fixed << std::setprecision(2) << temp.rezult() << std::fixed << std::setprecision(2) << temp.mediana(temp) << endl;
 }
 
 void spausdinti(vector<duomenys> &sarasas, vector<duomenys> &sarasas2, int fileLength/*, double &timeTaken*/){
@@ -253,7 +253,7 @@ void rikiavimas(vector<duomenys>& sarasas, int fileLength, double &timeTaken){
 //            return t1.rezult < t2.rezult;
 //        };
 //        sort(sarasas.begin(), sarasas.end(), lambda_func);
-        sort(sarasas.begin(), sarasas.end(), compare_g_paz);
+        std::sort(sarasas.begin(), sarasas.end(), compare_g_paz);
 
         //sarasas.sort(compare_g_paz);
 
@@ -266,7 +266,7 @@ void rikiavimas(vector<duomenys>& sarasas, int fileLength, double &timeTaken){
 int generateFileName(string& generatedFileName, int& pazymiuKiekis) {
     int fileLength;
     generatedFileName = "kursiokai";
-    cout << "Kokio ilgio faila generuoti?" << endl;
+    std::cout << "Kokio ilgio faila generuoti?" << endl;
     cin >> fileLength;
     /*while(cin.fail()){
         cout << "Ivedete netinkamus duomenis, bandykite dar karta!" << endl;
@@ -278,9 +278,9 @@ int generateFileName(string& generatedFileName, int& pazymiuKiekis) {
     //cout << fileLength << endl;
     //cout << generatedFileName << endl;
 
-    cout << "Iveskite kiek pazymiu tures studentai?" << endl;
+    std::cout << "Iveskite kiek pazymiu tures studentai?" << endl;
     cin >> pazymiuKiekis;
-    cout << endl;
+    std::cout << endl;
     /*while(cin.fail()){
         cout << "Ivedete netinkamus duomenis, bandykite dar karta!" << endl;
         cin.clear();
@@ -300,8 +300,8 @@ void generateFileData(string generatedFileName, int fileLength, int pazymiuKieki
 
     using hrClock = std::chrono::high_resolution_clock;
     std::mt19937 mt(static_cast<long unsigned int>(hrClock::now().time_since_epoch().count()));
-    std::uniform_int_distribution<int> name(0, vardas.size()-1);
-    std::uniform_int_distribution<int> surname(0, pavarde.size()-1);
+    std::uniform_int_distribution<int> name(0, (vardas.mysize()-1));
+    std::uniform_int_distribution<int> surname(0, (pavarde.mysize()-1));
     std::uniform_int_distribution<int> pazymys(1, 10);
 
     std::ofstream rf;
@@ -346,7 +346,7 @@ void generateFileData(string generatedFileName, int fileLength, int pazymiuKieki
     std::cout << fileLength << " eiluciu failo sukurimas uztruko: "<< diff.count() << " s\n";
     timeTaken += diff.count();
 
-    cout << "Failas: " << generatedFileName << " sekmingai sukurtas!" << endl;
+    std::cout << "Failas: " << generatedFileName << " sekmingai sukurtas!" << endl;
 }
 
 void atskirti(vector<duomenys>& sarasas, vector<duomenys>& sarasas2, int& fileLength, double &timeTaken){
@@ -364,13 +364,14 @@ void atskirti(vector<duomenys>& sarasas, vector<duomenys>& sarasas2, int& fileLe
    //sarasas.reserve(sarasas.size()-sarasas2.size());
 
     //vector<duomenys>::iterator it = sarasas.end(); it--;
-    for(auto it = sarasas.size(); it > 0; --it){
+
+    for(auto it = sarasas.mysize(); it > 0; --it){
         //cout << sarasas.at(it).pavarde() << endl;
         if(sarasas.at(it-1).rezult() >= 5){
             sarasas2.push_back(sarasas.at(it-1));
             sarasas.pop_back();
         }
-        if(sarasas2.size() % (fileLength / 10) == 0){
+        if(sarasas2.mysize() % (fileLength / 10) == 0){
             sarasas2.shrink_to_fit();
             //neveikia!
             //sarasas.shrink_to_fit();
