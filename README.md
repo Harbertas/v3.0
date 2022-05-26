@@ -229,7 +229,7 @@ using hrClock = std::chrono::high_resolution_clock;
 | vector | 7.26e-05s | 0.0004596s | 0.0026671s | 0.0369054s | 0.366815s |
 
 ### Atminties perskirstymas
-Tetavimo kodas:
+Testavimo kodas:
 ```c++
     unsigned int sz = 100000000;
     int p1 = 0, p2 = 0;
