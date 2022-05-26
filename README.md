@@ -71,9 +71,7 @@
 
     for (int i = 1; i < 10; i++) v.push_back(i);
 
-    std::cout << "v contains:";
-    for (int i = 0; i < v.size(); i++)
-        std::cout << ' ' << v[i];
+    cout << v.size() << endl;
     std::cout << '\n';
 
 
@@ -81,7 +79,7 @@
 
     for (int i = 1; i < 10; i++) v1.push_back(i);
 
-    cout << v1.mycapacity() << endl;
+    cout << v1.mysize() << endl;
     ```
     Rezultatas:
     ```console
