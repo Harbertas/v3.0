@@ -281,3 +281,7 @@ Rezultatas:
 | 100,000 | 0,0870578 | 0,253838 | 0,229104 | 0,5700 |
 | 1,000,000 | 0,870056 | 1,61418 | 1,51275 | 3,99699 |
 | 10,000,000 | 6,95755 | 17,4103 | 24,8366 | 49,2045 |
+
+## Išvados
+1. Programa veikė greičiau naudojant std::vector;
+2. Atminties valdymas buvo sklaidesnis naudojant std::vector;
