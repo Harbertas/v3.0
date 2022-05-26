@@ -267,11 +267,11 @@ Rezultatas:
 ### std::vector
 | Įrašų kiekis | Duomenų skaitymas, s | Studentų rūšiavimas pagal pažymius, s | Studentų rūšiavimas į dvi kategorijas, s | Visos programos veikimo laikas, s |
 |---|---|---|---|---|
-| 1,000 | 0,0007215 | 0,0006434 | 0,0005509 | 0,0019158 |
-| 10,000 | 0,0063462 | 0,011345 | 0,0064181 | 0,0241093 |
-| 100,000 | 0,120677 | 0,583439 | 0,119681 | 0,823797 |
-| 1,000,000 | 1,12 | 7,75227 | 1,19181 | 10,0641 |
-| 10,000,000 | 7,16445 | 28,2978 | 6,57801 | 42,0402 |
+| 1,000 | 0,0009606 | 0,0006687 | 0,0005706 | 0,0021999 |
+| 10,000 | 0,0086893 | 0,0106566 | 0,0069483 | 0,0262942 |
+| 100,000 | 0,0679738 | 0,0946483 | 0,0642741 | 0,226896 |
+| 1,000,000 | 0,70264 | 0,905958 | 0,613416 | 2,22201 |
+| 10,000,000 | 7,19385 | 9,50958 | 6,11496 | 22,8184 |
 
 ### vector
 | Įrašų kiekis | Duomenų skaitymas, s | Studentų rūšiavimas pagal pažymius, s | Studentų rūšiavimas į dvi kategorijas, s | Visos programos veikimo laikas, s |
