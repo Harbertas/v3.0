@@ -284,4 +284,4 @@ Rezultatas:
 
 ## Išvados
 1. Programa veikė greičiau naudojant std::vector;
-2. Atminties valdymas buvo sklaidesnis naudojant std::vector;
+2. Atminties valdymas buvo sklandesnis naudojant std::vector;
